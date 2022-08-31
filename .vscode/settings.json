@@ -1,5 +1,4 @@
 {
-  "makefile.extensionOutputFolder": "./.vscode",
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
@@ -28,6 +27,5 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "C_Cpp.errorSquiggles": "Disabled"
+  ]
 }
