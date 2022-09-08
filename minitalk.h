@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 16:46:32 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/09/03 10:32:28by yaidriss         ###   ########.fr       */
+/*   Created: 2022/09/07 18:50:30 by yaidriss          #+#    #+#             */
+/*   Updated: 2022/09/08 17:51:45 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#ifndef	MINITALK_H
+#define MINITALK_H
 
-int main (int ac, char **av)
-{
-  int i;
-  i = getpid();
-  ft_printf("the pid is %d\n", i);
 
-}
+#include <signal.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <limits.h>
+# include <stdarg.h>
+# include <ctype.h>
+# include "libft/libft.h"
+
+int	ft_printf(const char *format, ...);
+
+#indef

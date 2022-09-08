@@ -5,7 +5,7 @@
 ### create client server file and add libft repo
 #### Using manual copy (or link)
 
-Just click here to dowlond  [my libft](https://github.com/yassineidrissi/lift) or copy the link above
+Just click here to dowlond  [my libft](https://github.com/yassineidrissi/libft) or copy the link above
 
 ```sh
 git clone https://github.com/yassineidrissi/libft.git
