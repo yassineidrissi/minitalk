@@ -11,11 +11,17 @@
 /* ************************************************************************** */
 
 // #include "minitalk.h"
+#include <stdio.h>
+#include <unistd.h>
 
 int main (int ac, char **av)
 {
   int i;
   i = getpid();
   printf("the pid is %d\n", i);
-
+  while(1)
+  {
+    sleep(3);
+    printf("we still running\n");
+  }
 }

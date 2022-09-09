@@ -6,7 +6,16 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:47:01 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/09/07 18:36:34 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/09/10 00:49:35 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <signal.h>
+
+int main(int ac,char **av)
+{
+  int id;
+  id = atoi(av[1]);
+  kill(id,SIGCONT);
+}
