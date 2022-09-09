@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+// #include "minitalk.h"
 
 int main (int ac, char **av)
 {
   int i;
   i = getpid();
-  ft_printf("the pid is %d\n", i);
+  printf("the pid is %d\n", i);
 
 }

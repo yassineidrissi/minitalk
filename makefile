@@ -10,3 +10,4 @@ all :
 	@echo "\033[92m╚══════╝╚═════╝░╚═════╝░░░╚═╝░░░\033[0m"
 	@echo ""
 	@echo "\033[92m generation of client and server exucted files\033[0m"
+	gcc -Wall -Wextra -Werror -o server server.c
