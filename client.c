@@ -10,18 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "minitalk.h"
-#include <stdio.h>
-#include <unistd.h>
+#include "minitalk.h"
 
-int main (int ac, char **av)
+int main(int ac,char **av)
 {
-  int i;
-  i = getpid();
-  printf("the pid is %d\n", i);
-  while(1)
+  int id;
+  int i = 0;
+  int j = -1;
+  id = atoi(av[1]);
+  // kill(id,SIGSTOP);
+  while(av[2][++j])
   {
-    sleep(3);
-    printf("we still running\n");
+    i = -1;
+    while(++i < 8)
+    {
+      if((av[2][j] >> i) & 1)
+        kill(id,SIGUSR1);
+      else
+        kill(id,SIGUSR2);
+    }
+    usleep(100);
   }
 }
