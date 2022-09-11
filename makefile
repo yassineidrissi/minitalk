@@ -1,6 +1,6 @@
 
 
-SRCS = 
+SRCS = server.c client.c
 OBG = ${SRCS:.c=.o}
 NAME_S = server
 NAME_C = client
@@ -19,5 +19,21 @@ RM = rm -rf
 	@echo ""
 	@echo "\033[92m generation of client and server exucted files\033[0m"
 
-all :	1337
-		gcc server.c -o server
+%.o : %.c
+	${CC} ${CFLAGS} -c $< -o $@
+
+${NAME_S} : ${OBG}
+	${CC} ${CFLAGS} -o ${NAME_S} server.c
+
+${NAME_C} : ${OBG}
+	${CC} ${CFLAGS} -o ${NAME_C} client.c
+
+all :	1337_logo ${NAME_S} ${NAME_C}
+
+clean : 
+	$(RM) $(NAME_S) $(NAME_C)
+
+fclean : clean
+
+re : clean all
+		

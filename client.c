@@ -14,6 +14,7 @@
 
 int main(int ac,char **av)
 {
+	(void)ac;
   int id;
   int i = 0;
   int j = -1;
@@ -21,14 +22,20 @@ int main(int ac,char **av)
   // kill(id,SIGSTOP);
   while(av[2][++j])
   {
-    i = -1;
-    while(++i < 8)
+    i = 8;
+    while(--i > -1)
     {
       if((av[2][j] >> i) & 1)
+      {
         kill(id,SIGUSR1);
+        // printf("we sent 1\n");
+      }
       else
+      {
         kill(id,SIGUSR2);
+        // printf("we sent 0\n");
+      }
+      usleep(100);
     }
-    usleep(100);
   }
 }
