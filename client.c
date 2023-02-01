@@ -18,23 +18,23 @@ int main(int ac,char **av)
   int id;
   int i = 0;
   int j = -1;
-  id = atoi(av[1]);
-  // kill(id,SIGSTOP);
+  unsigned char c;
+  if (ac != 3)
+  {
+    printf("usage: ./client [server pid] [message]");
+    return 0;
+  }
+  id = atoi(av[1]); //!zid atoi  
   while(av[2][++j])
   {
     i = 8;
+    c = av[2][j];
     while(--i > -1)
     {
-      if((av[2][j] >> i) & 1)
-      {
+      if((c >> i) & 1)
         kill(id,SIGUSR1);
-        // printf("we sent 1\n");
-      }
       else
-      {
         kill(id,SIGUSR2);
-        // printf("we sent 0\n");
-      }
       usleep(100);
     }
   }
