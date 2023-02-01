@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 18:50:30 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/09/10 00:55:15 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/01 21:05:46 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <ctype.h>
-# include "libft/libft.h"
 
 int	ft_printf(const char *format, ...);
-
+int	ft_atoi(const char *str);
 #endif

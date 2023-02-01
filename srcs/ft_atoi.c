@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidrissi <yassine1337idrissi@gmail.com>    +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:28:52 by yidrissi          #+#    #+#             */
-/*   Updated: 2021/12/01 20:22:39 by yidrissi         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:24:09 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../minitalk.h"
 
 static int	ft_isspace(char c)
 {

@@ -3,28 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 16:46:32 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/09/03 10:32:28by yaidriss         ###   ########.fr       */
+/*   Created: 2023/02/01 19:06:07 by yaidriss          #+#    #+#             */
+/*   Updated: 2023/02/01 21:05:19 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int main(int ac,char **av)
+int	main(int ac, char **av)
 {
+	int						id;
+	unsigned char	c;
+
 	(void)ac;
-  int id;
   int i = 0;
   int j = -1;
-  unsigned char c;
   if (ac != 3)
   {
-    printf("usage: ./client [server pid] [message]");
+    ft_printf("usage: ./client [server pid] [message]");
     return 0;
   }
-  id = atoi(av[1]); //!zid atoi  
+  id = ft_atoi(av[1]);
+  if (id == -1) 
+  {
+    ft_printf("usage: ./client [valid server pid] [message]");
+    return 0;
+  }
+
+  //!zid atoi  
   while(av[2][++j])
   {
     i = 8;
@@ -38,4 +46,5 @@ int main(int ac,char **av)
       usleep(100);
     }
   }
+  return (0);
 }
