@@ -27,8 +27,8 @@
       "args": [],
       "stopAtEntry": true,
       "externalConsole": false,
-      "cwd": "/Users/yassine/Desktop/42_project/minitalk",
-      "program": "/Users/yassine/Desktop/42_project/minitalk/build/Debug/outDebug",
+      "cwd": "/Users/yassine/Desktop/42_project/minitalk/minitalk",
+      "program": "/Users/yassine/Desktop/42_project/minitalk/minitalk/a.out",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb"
     }
