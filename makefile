@@ -6,15 +6,17 @@ SRCS_BC = client_bonus.c srcs/ft_printf.c srcs/ft_atoi.c
 SRCS_BS = server_bonus.c srcs/ft_printf.c srcs/ft_atoi.c
 OBG_BC = ${SRCS_BC:.c=.o}
 OBG_BS = ${SRCS_BS:.c=.o}
-NAME = server client
-NAME_B = server_bonus client_bonus
+NAME_S = server
+NAME_C = client
+NAME_BS = server_bonus
+NAME_BC = client_bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
-all : 1337_logo ${NAME_S}
+all : 1337_logo ${NAME_S} ${NAME_C}
 
-bonus : 1337_logo ${NAME_B}
+bonus : 1337_logo ${NAME_BS} ${NAME_BC}
 
 1337_logo : 
 	@echo "\033[92m░░███╗░░██████╗░██████╗░███████╗\033[0m"
@@ -27,17 +29,21 @@ bonus : 1337_logo ${NAME_B}
 	@echo "\033[92m generation of client and server exucted files✅\033[0m"
 
 
-${NAME} : ${OBG}
-	${CC} ${CFLAGS} ${OBG_S} -o ${NAME_S}
-	${CC} ${CFLAGS} ${OBG_C} -o ${NAME_C}
+${NAME_S} : ${OBG_S}
+	@${CC} ${CFLAGS} ${OBG_S} -o ${NAME_S}
 
-${NAME_B} : ${OBG_B}
-	${CC} ${CFLAGS} ${OBG_BS} -o ${NAME_BS}
-	${CC} ${CFLAGS} ${OBG_BC} -o ${NAME_BC}
+${NAME_C} : ${OBG_C}
+	@${CC} ${CFLAGS} ${OBG_C} -o ${NAME_C}
+
+${NAME_BS} : ${OBG_BS}
+	@${CC} ${CFLAGS} ${OBG_BS} -o ${NAME_BS}
+
+${NAME_BC} : ${OBG_BC}
+	@${CC} ${CFLAGS} ${OBG_BC} -o ${NAME_BC}
 
 
 %.o : %.c
-	${CC} ${CFLAGS} -c $< -o $@
+	@${CC} ${CFLAGS} -c $< -o $@
 
 
 clean : 
@@ -46,7 +52,8 @@ clean :
 	@echo "\033[31m Delete exucted files🗑\033[31m"
 
 fclean : clean
-	@$(RM) ${NAME} ${NAME_B}
+	@$(RM) ${NAME_S} ${NAME_C}
+	@$(RM) ${OBG_BS} ${OBG_BC}
 	@echo "\033[31m Delete object files🗑\033[31m"
 
 re : fclean all bonus

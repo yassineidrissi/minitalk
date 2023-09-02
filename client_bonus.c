@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 22:59:43 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/04 19:30:57 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:10:22 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,6 @@ void	ft_handle_conv(char **av, int id)
 		c = av[2][j];
 		while (--i > -1)
 		{
-			if (kill (id, 0) == -1)
-			{
-				ft_printf("Wrong PID !\n");
-				exit (1);
-			}
 			if ((c >> i) & 1)
 				kill (id, SIGUSR1);
 			else
